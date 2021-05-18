@@ -1,0 +1,279 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <style>
+header{
+
+color: purple;
+
+font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+text-align: center;
+
+}
+        
+body 
+{
+    background-image: url('steel.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.banner 
+    {
+      overflow: hidden;
+      background-image: url('gymbanner.jpg');
+      background-repeat: no-repeat;
+      background-size: 75pt;
+    }
+    
+    .topnav 
+    {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .topnav a 
+    {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover 
+{
+  background-color: rebeccapurple;
+  color: black;
+}
+    
+    .topnav a.active 
+{
+  background-color: #0addcb;
+  color: white;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] 
+{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #0addcb;
+}
+
+/* Style the container/contact section */
+
+.container 
+{
+  border-radius: 5px;
+  background-color: green;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) { 
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+footer
+{
+
+position: fixed;
+
+left: 0;
+
+bottom: 0;
+
+width: 100%;
+
+background-color: rgb(0, 0, 0);
+
+color: white;
+
+text-align: center;
+
+}
+
+    </style>
+    
+    <script >
+    
+    function validateMembership() 
+    { 
+      var k = document.forms["registration"]["firstname"].value;
+      if (k == "") 
+      {
+        alert("First name must be filled out");
+        return false;
+      }
+      var l = document.forms["registration"]["lastname"].value;
+      if (l == "") 
+      {
+        alert("Last name must be filled out");
+        return false;
+      }
+    
+      var m = document.forms["registration"]["email"].value;
+      if (m == "") 
+      {
+        alert("Your E-mail must be filled out");
+        return false;
+      }
+    
+      var n = document.forms["registration"]["phone"].value;
+      if (n == "") 
+      {
+        alert("Please enter a valid phone number");
+        return false;
+      }
+    
+      var p = document.forms["registration"]["address"].value;
+      if (p == "") 
+      {
+        alert("Address must be filled out");
+        return false;
+      }
+    
+      var q = document.forms["registration"]["city"].value;
+      if (q == "") 
+      {
+        alert("Name of city must be filled out");
+        return false;
+      }
+    
+      var r = document.forms["registration"]["zip"].value;
+      if (r == "") 
+      {
+        alert("Zipcode must be filled out");
+        return false;
+      }
+      var o = document.forms["registration"]["subject"].value;
+      if (o == "") 
+      {
+        alert("You should write something on here");
+        return false;
+      }
+    
+    }
+    </script>
+    
+    
+    </head>
+    
+    <body>
+      <header>
+        <div class="banner">
+                <a href="index.html">
+                <img src="gymbanner.jpg" width="1500" height="125" ></a>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="active" href="index.html">
+      <img border="0" alt="ProjectGreenBK" src="bicep.png" width="60" height="40">
+        </a>
+        <a href="about.html">About</a>
+        <a href="membership.html">Join</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      
+      </header>
+    <h1><font color="Black">Contact Section</font></h1>
+
+    <div class="container">
+    <div style="text-align:center">
+        <h2><font color="white">Contact Us</font></h2> 
+        <p><font color="white"> :) Give us a feedback, or leave us a message:</</p>
+    </div>
+    <div style="text-align:center">
+    <form name='registration' onSubmit="return validateMembership();">
+    <br>
+    <p style="font-size: large;"> <font color="white"> Must be filled out if has a '*'</p>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    
+        <p><label for="email">*Email:</label>
+        <input type="text" name="email" size="54" placeholder="E-mail address" /></p>
+    
+        <p><label for="phone">*Phone:</label>
+        <input type="text" name="phone" size="50" placeholder="Phone Number" /></p>
+    
+        <p><label for="country">Country:</label>
+        <select name="country">
+        <option selected="" value="Default">(Please select a country)</option>
+        <option value="AL">Canada</option>
+        <option value="AS">Mexico</option>
+        <option value="AD">USA</option>
+        </select></p> 
+    
+        <p><label for="address">*Address:</label></li>
+        <input type="text" name="address" size="52" placeholder="Street Address" /></p>
+    
+        <p><label for="city">*City:</label>
+        <input type="text" name="city" size="50" placeholder="City" /></p>
+    
+        <p><label for="zip">*ZIP Code:</label>
+        <input type="text" name="zip" size="50" placeholder="Zip Code" /></p>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        
+   <p><input type="submit" name="submit" value="Submit" /> </font> </p>
+        
+        </form>
+    </div>
+    </div>
+    <footer>
+
+        <address>HQ: 104 Victory Blvd, Staten Island, New York 10301, USA. ®Project Green Brooklyn, ALL RIGHTS RESERVED</address>
+        
+        </footer>
+    </body>
+</html>
